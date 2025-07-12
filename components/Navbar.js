@@ -6,7 +6,8 @@ export default function Navbar() {
   return (
     <header className="w-full py-4 px-6 flex justify-between items-center bg-white dark:bg-slate-950 shadow-sm sticky top-0 z-50">
       <div className="text-xl font-bold">
-        Seller<span className="text-primary">Shield</span>
+        <Link href="/" className="hover:text-primary">Seller<span className="text-primary">Shield</span></Link>
+        
       </div>
 
       <nav className="hidden md:flex gap-6 text-sm text-slate-800 dark:text-slate-100">

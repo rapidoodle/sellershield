@@ -5,6 +5,7 @@ import ContactForm from "@/components/ContactForm";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import DownloadLeadForm from "@/components/DownloadLeadForm";
+import Image from "next/image";
 
 export default function Home() {
   return (
@@ -15,18 +16,33 @@ export default function Home() {
       </Head>
 
       <main className="min-h-screen bg-white dark:bg-slate-950 text-slate-900 dark:text-white px-6">
-        <section className="relative bg-slate-50 dark:bg-slate-900 py-24 px-6 text-center overflow-hidden">
+        <section className="relative bg-slate-50 dark:bg-slate-900 py-24 px-6 overflow-hidden">
           <div className="absolute inset-0 opacity-10 dark:opacity-5 bg-[url('/bg-pattern.svg')] bg-cover bg-center" />
-          <div className="relative z-10 max-w-4xl mx-auto">
-            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
-              Amazon Suspended You? <br className="hidden md:inline" /> We’ll Fix It — Fast.
-            </h1>
-            <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
-              SellerShield is the trusted partner for urgent reinstatements, listing violations, and hijacker enforcement.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="text-base">📅 Book a Call</Button>
-              <Button size="lg" className="text-base">📄 Get the Checklist</Button>
+
+          <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12">
+            {/* Text */}
+            <div className="text-center md:text-left">
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
+                Amazon Suspended You? <br className="hidden md:inline" /> We’ll Fix It. Fast.
+              </h1>
+              <p className="text-lg text-slate-600 dark:text-slate-300 mb-8">
+                SellerShield is the trusted partner for urgent reinstatements, listing violations, and hijacker enforcement.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                <Button size="lg" className="text-base">📅 Book a Call</Button>
+                <Button size="lg" className="text-base">📄 Get the Checklist</Button>
+              </div>
+            </div>
+
+            {/* Image */}
+            <div className="flex justify-center md:justify-end">
+              <Image
+                src="/images/hero-support-illustration.png"
+                alt="SellerShield Amazon Support"
+                width={500}
+                height={500}
+                priority
+              />
             </div>
           </div>
         </section>
