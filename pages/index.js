@@ -19,7 +19,7 @@ export default function Home() {
         <section className="relative bg-slate-50 dark:bg-slate-900 py-24 px-6 overflow-hidden">
           <div className="absolute inset-0 opacity-10 dark:opacity-5 bg-[url('/bg-pattern.svg')] bg-cover bg-center" />
 
-          <div className="relative z-10 max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-12">
+          <div className="relative z-10 max-w-6xl mx-auto flex flex-col-reverse md:grid md:grid-cols-2 items-center gap-12">
             {/* Text */}
             <div className="text-center md:text-left">
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight mb-6">
