@@ -52,34 +52,41 @@ export default function Home() {
             {
               title: "ASIN Reinstatement",
               desc: "We resolve EPA, medical, or policy takedowns fast.",
+              image: "/images/asin-reinstatement.png", 
             },
             {
               title: "Account Suspension Recovery",
               desc: "Get back to selling with expert-led account appeals.",
+              image: "/images/account-suspended.png", 
             },
             {
               title: "Brand Protection",
               desc: "We monitor hijackers, remove unauthorized sellers, and secure your listings.",
+              image: "/images/brand-protection.png", 
             },
             {
               title: "Restricted Product Appeals",
               desc: "We help recover blocked listings flagged by Amazon.",
+              image: "/images/appeal.png", 
             },
             {
               title: "IP Complaint Handling",
               desc: "False IP claims? We'll prepare and file the right appeals.",
+              image: "/images/complaint-handling.png", 
             },
             {
               title: "Crisis Retainer Plans",
               desc: "On-call Amazon support when you need it most.",
+              image: "/images/crisis-retainer.png", 
             },
-          ].map(({ title, desc }, i) => (
-            <Card key={i}>
-              <CardContent className="p-6">
-                <CardTitle>{title}</CardTitle>
-                <p className="text-sm mt-2">{desc}</p>
-              </CardContent>
-            </Card>
+          ].map(({ title, desc, image }, i) => (
+          <Card key={i}>
+            <CardContent className="p-6">
+              {image && <img src={image} alt={title} className="mb-4 w-full h-40 object-contain" />}
+              <CardTitle>{title}</CardTitle>
+              <p className="text-sm mt-2">{desc}</p>
+            </CardContent>
+          </Card>
           ))}
         </section>
 
